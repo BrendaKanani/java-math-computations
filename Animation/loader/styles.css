@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000; /* Optional: for better visibility */
+}
+
+.loader {
+    height: 9em;
+    width: 9em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.white {
+    border-width: 3px 3px 0 0;
+    border-color: white white transparent transparent;
+    animation: rotate-white 2s linear infinite;
+}
+
+.red {
+    border-width: 0 0 3px 3px;
+    border-color: transparent transparent red red;
+    animation: rotate-red 2s linear infinite;
+}
+
+.orange {
+    border-width: 0 3px 3px 0;
+    border-color: transparent orange orange transparent;
+    animation: rotate-orange 2s linear infinite;
+}
+
+.yellow {
+    border-width: 3px 0 0 3px;
+    border-color: yellow transparent transparent transparent;
+    animation: rotate-yellow 2s linear infinite;
+}
+
+@keyframes rotate-white {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-red {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-orange {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-yellow {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
